@@ -3,6 +3,8 @@ Data extraction using sequenced QR codes and cameras for the link layer! Got a f
 
 # Example
 
+<img src="documentation/resources/lolsafee.gif" width="200" style="border-radius:10px;">
+
 *On the tx system*
 ```bash
 python file_to_qrs.py your_file_to_transfer
