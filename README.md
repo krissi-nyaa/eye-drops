@@ -1,5 +1,5 @@
 # eye-drops
-Data extraction using high-speed QR codes and cameras for the link layer! Got a file you can't get out? Physical security low but network locked down and local system encrypted? Use your screen and a highspeed camera to save and transfer files, or ball hard and bring a laptop and camera.
+Data extraction using sequenced QR codes and cameras for the link layer! Got a file you can't get out? Physical security low but network locked down and local system encrypted? Use your screen and a highspeed camera to save and transfer files, or ball hard and bring a laptop and camera.
 
 # Example
 
