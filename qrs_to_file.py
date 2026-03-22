@@ -3,6 +3,7 @@ from tkinter import Image
 import time
 import cv2
 import argparse
+import base64
 
 from qreader import QReader
 from qr_get.camera import Camera
@@ -24,7 +25,10 @@ if __name__ == "__main__":
     curr_data = b''
     prev_data = b''
     start_time = time.time()
-    while time.time() - start_time < 60:
+    
+    #camera._display_frame(camera.cam_to_img()) # Test framing
+    
+    while time.time() - start_time < 1000:
         frame = camera.cam_to_img()
         qr_data = qr_reader.detect_and_decode(frame)
         if qr_data:
@@ -37,7 +41,7 @@ if __name__ == "__main__":
 
                         curr_data = qr_data[0]
                         print(f"{curr_data}")
-                        data.write(bytes(curr_data.encode('utf-8')))
+                        data.write(base64.b64decode(curr_data))
                         prev_data = curr_data
     data.seek(0)
     # Save the data to a file

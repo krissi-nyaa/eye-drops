@@ -14,7 +14,7 @@ class Camera:
         if not ret:
             print("cam ded lols get rekt...")
             return None
-        frame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
+        # frame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
         cv.imwrite(self.blob, frame)
         self.blob.seek(0)
         return frame
