@@ -20,6 +20,8 @@ python qrs_to_file.py file_to_create
 ## Caveats
 - Believe it or not, screen savers...
   - Tested on an OLED monitor for a longer file transfer, came back to a new interpretation of packet drop
+- Bandwidth is maxed using QR code technology, need something cooler and compressy to really make things sparkle
+- Throughput is slow if done live, but if you *just need the extraction* you could setup a camera to record things correctly at a high speed, achieving a theoretical 81.77KB/s with a 60Hz monitor, then slow it down and decode it later
 
 ## TODO: 
 - ~~MAKE IT WORK FOR BYTES!!! Encoding is currently fudged because i bought into QReader, which is amazingly fast... but the encoding used is hard-coded into there and doesn't work for anything but transferring text files.~~
@@ -27,6 +29,7 @@ python qrs_to_file.py file_to_create
 - ~~Take the training wheels off the QR codes (currently capped at 1000 bytes per code)~~
   - We are fairly maxed at version 40 QR codes. With the base64 overhead we're getting a really lame 1.5KB / QR
   - With a bad camera like mine, ~350KB of data will take 4.27 minutes to transfer (assuming 1s per QR code)
+
 - Investigate dropping QR standards and building something custom with better visual-space data compression for this
 - Finalize qrs_to_file tool and move the duct tape to qr_get
 - Currently the rx tool just waits 60s then dies, should have some sort of 'start capture' and 'end capture' feature
